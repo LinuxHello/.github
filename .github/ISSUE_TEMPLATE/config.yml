@@ -1,0 +1,6 @@
+# Default for organisation repositories without their own issue templates.
+blank_issues_enabled: true
+contact_links:
+  - name: Report a vulnerability privately
+    url: https://github.com/LinuxHello/linux-hello/security/advisories/new
+    about: Never in a public issue. See SECURITY.md.

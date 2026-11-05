@@ -26,6 +26,12 @@ Passkeys and secrets for the Linux desktop, rooted in a PIN and unlocked by biom
 
 Start with the [architecture sections](https://github.com/LinuxHello/architecture/blob/main/arc42/README.md) and the [decision records](https://github.com/LinuxHello/architecture/blob/main/adr/README.md).
 
+## Architecture and decisions
+
+- The architecture is documented in the twelve [Arc42 sections](https://github.com/LinuxHello/architecture/blob/main/arc42/README.md) ([ADR-0010](https://github.com/LinuxHello/architecture/blob/main/adr/0010-arc42-architecture-documentation.md), proposed), with the C4 model in Structurizr DSL (system context, containers, components).
+- The architecture, the decision records and the spikes live in their own repository, so changing them does not run the code's gates ([ADR-0011](https://github.com/LinuxHello/architecture/blob/main/adr/0011-architecture-repository.md), accepted). `linux-hello` pins a commit of it as a submodule. CI checks that every crate and component module names an element of that model ([ADR-0008](https://github.com/LinuxHello/architecture/blob/main/adr/0008-code-documentation-mapped-to-c4.md), proposed).
+- A change to a container, component, interface or decision starts as a pull request in `architecture`; the code follows in `linux-hello`.
+
 ## Contributing
 
 - Run `make next` in `linux-hello` or read [the backlog](https://github.com/LinuxHello/linux-hello/blob/main/docs/project/backlog.md) to find work. See [CONTRIBUTING.md](https://github.com/LinuxHello/linux-hello/blob/main/CONTRIBUTING.md).
