@@ -4,13 +4,13 @@
 
 # Linux Hello
 
-Passkeys and secrets for the Linux desktop, rooted in a PIN and unlocked by biometrics: a session credential broker built on [credentialsd](https://github.com/linux-credentials/credentialsd), fprintd, Howdy, KeePassXC and TPM 2.0.
+Passkeys and secrets for the Linux desktop, rooted in a PIN and unlocked by biometrics: a session credential broker built on a virtual CTAP authenticator, fprintd, Howdy, KeePassXC and TPM 2.0 ([ADR-0005](https://github.com/LinuxHello/architecture/blob/main/adr/0005-provider-path.md)).
 
-**Status: pre-alpha.** Nothing here authenticates anyone yet. There are no releases.
+**Status: pre-alpha.** Nothing here authenticates anyone yet. There are no releases. The Agent's state API, its confinement and the policy layers exist; a TPM-backed virtual authenticator works as a prototype with libfido2, Chromium and Firefox ([spike 0094](https://github.com/LinuxHello/architecture/blob/main/spikes/0094-virtual-ctap-end-to-end.md)). The [README of `linux-hello`](https://github.com/LinuxHello/linux-hello#readme) says what is built.
 
 ## What it does
 
-- **Unlock once.** Face, fingerprint or PIN unlocks the session; passkeys then work in browsers, native apps and Electron apps through the credentialsd portal.
+- **Unlock once.** Face, fingerprint or PIN unlocks the session; passkeys then work in browsers, native apps and Electron apps through a virtual security key (a `uhid` device), without patching the browsers.
 - **The PIN is the root.** Keys hang off a per-user TPM root key that the PIN authorises. Biometrics only satisfy a TPM policy. The account password authorises a destructive reset, never an unlock.
 - **Per relying party custody.** A routing policy decides for each relying party whether its key is device-bound (TPM) or portable (KeePassXC).
 - **Keys sign, never leave.** Private keys stay in the TPM or KeePassXC.
