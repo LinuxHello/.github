@@ -4,7 +4,7 @@
 
 # Linux Hello
 
-Passkeys and secrets for the Linux desktop, rooted in a PIN and unlocked by biometrics: a session credential broker built on a virtual CTAP authenticator, fprintd, Howdy, KeePassXC and TPM 2.0 ([ADR-0005](https://github.com/LinuxHello/architecture/blob/main/adr/0005-provider-path.md)).
+Passkeys and secrets for the Linux desktop, rooted in a PIN and unlocked by biometrics: a session credential broker built on a virtual CTAP authenticator, fprintd, Howdy, KeePassXC and TPM 2.0 ([ADR-0005](https://github.com/LinuxHello/architecture/blob/main/adr/0005-provider-path.md)). The homepage is [linuxhello.github.io](https://linuxhello.github.io/).
 
 **Status: pre-alpha.** Nothing here authenticates anyone yet. There are no releases. The Agent's state API, its confinement and the policy layers exist; a TPM-backed virtual authenticator works as a prototype with libfido2, Chromium and Firefox ([spike 0094](https://github.com/LinuxHello/architecture/blob/main/spikes/0094-virtual-ctap-end-to-end.md)). The [README of `linux-hello`](https://github.com/LinuxHello/linux-hello#readme) says what is built.
 
