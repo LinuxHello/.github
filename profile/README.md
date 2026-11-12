@@ -21,11 +21,11 @@ Passkeys and secrets for the Linux desktop, rooted in a PIN and unlocked by biom
 
 ## Repositories
 
-| Repository | Content |
-| :-- | :-- |
-| [linux-hello](https://github.com/LinuxHello/linux-hello) | The code (one crate per container), the security properties and the policy semantics |
+| Repository                                                 | Content                                                                                                                |
+| :--------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- |
+| [linux-hello](https://github.com/LinuxHello/linux-hello)   | The code (one crate per container), the security properties and the policy semantics                                   |
 | [architecture](https://github.com/LinuxHello/architecture) | The architecture (Arc42 sections, C4 model), the decision records and the spikes; `linux-hello` pins it as a submodule |
-| [branding](https://github.com/LinuxHello/branding) | The brand guide, the logo and its variants |
+| [branding](https://github.com/LinuxHello/branding)         | The brand guide, the logo and its variants                                                                             |
 
 Start with the [architecture sections](https://github.com/LinuxHello/architecture/blob/main/arc42/README.md) and the [decision records](https://github.com/LinuxHello/architecture/blob/main/adr/README.md).
 
