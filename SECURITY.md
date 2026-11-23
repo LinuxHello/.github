@@ -2,7 +2,7 @@
 
 This policy applies to every repository of the LinuxHello organisation that has no `SECURITY.md` of its own. The full policy, including the security model and response times, is in [`linux-hello`'s SECURITY.md](https://github.com/LinuxHello/linux-hello/blob/main/SECURITY.md).
 
-> **Status: pre-alpha.** Nothing here authenticates anyone yet. Do not use it to protect real accounts.
+> **Status: pre-alpha.** A first prototype can unlock `sudo`, but nothing here is ready to protect real accounts, so do not use it for that.
 
 ## Reporting a vulnerability
 
